@@ -1,0 +1,25 @@
+<!-- <p>header works!</p> -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand">
+      <img src="https://lh3.googleusercontent.com/a-/AD_cMMQMJRbPuN00bD4qixDMfmQFbU8UeWv0z2Wxbe98yDMrSg=s75-c" title="Emmet Academy" class="logo" alt="Emmet Academy">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <span *ngIf="isNewUser" class="btn btn-primary">
+            <a class="text-white sign" routerLink="/login" (click)="isNewUser = false"> Sign In</a>
+          </span>
+          <span *ngIf="!isNewUser" class="btn btn-success">
+            <a class="text-white sign" routerLink="/signup" (click)="isNewUser = true"> Sign Up</a>
+          </span>
+          <button class="btn btn-danger ml-3" id="signOutBtn" routerLink="login">Log Out</button>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>

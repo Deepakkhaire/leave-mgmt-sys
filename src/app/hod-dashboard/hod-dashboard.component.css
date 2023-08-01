@@ -1,0 +1,14 @@
+.req-section{
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hod-name{
+    border-bottom: 2px solid black;
+}
+.card{
+    height: 300px;
+    overflow-y: auto;
+}

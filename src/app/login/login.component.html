@@ -1,0 +1,23 @@
+<!-- <p>login works!</p> -->
+<div class="text-center mt-4">
+    <span [ngClass]="errMsg?'alert alert-danger':'d-none'" [innerHTML]="errMsg"></span>
+</div>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 border border-dark p-5">
+            <h3 class="text-primary text-center">Login</h3>
+            <form [formGroup]="authUsers" (ngSubmit)="login()">
+                <div class="form-group">
+                    <label for="uname">Username*</label>
+                    <input type="text" name="userName" formControlName="username" id="uname" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="upass">Password*</label>
+                    <input type="password" name="userPass" formControlName="password" id="upass" class="form-control">
+                </div>
+                <button class="btn btn-primary btn-block">Login</button>
+                <p class="text-center mt-2">Not Registered Yet? <a routerLink="/signup" class="text-primary" >Register</a></p>
+            </form>
+        </div>
+    </div>
+</div>
