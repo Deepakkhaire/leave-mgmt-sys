@@ -19,7 +19,7 @@
 @media all and (max-width:500px) {
     h2{
         position: absolute;
-        left: 40px;
+        left: 2px;
         color: rgb(241, 80, 68);
         box-shadow: 13px 13px 32px 1px #000000;
     }   
