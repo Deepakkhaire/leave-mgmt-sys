@@ -15,12 +15,23 @@ export class HttpDataHandlerService{
     constructor( private http : HttpClient){}
     
 
+
     checkAuthentication(){
         return new Promise((resolve) => {
             setTimeout(() => {
-                resolve(this.isLoggedIn)
+                let getLsId = localStorage.getItem('loggedId')
+                resolve(this.isLoggedIn || getLsId == 'true')
             }, 2000);
         })
+    }
+    loggedIn(){
+        this.isLoggedIn = true;
+        localStorage.setItem("loggedId", 'true');
+        // console.log(localStorage.setItem("loggedId", 'true'));
+    }
+    loggedOut(){
+        this.isLoggedIn = false;
+        localStorage.clear();
     }
     postUsers( newObj : any){
         return this.http.post(this.baseUrl, newObj);

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpDataHandlerService } from '../shared/services/http-dataHandler.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,12 +12,12 @@ export class HeaderComponent implements OnInit{
   // logOutBtn = document.getElementById('signOutBtn');
   showTxt :boolean = true;
   isNewUser:boolean =true;
+  constructor( private httpsServe : HttpDataHandlerService, private router : Router){}
   ngOnInit(): void {
-    // this.getBtn()
+  }
+  loggedOutt(){
+    this.httpsServe.loggedOut();
+    this.router.navigate(["/login"])
   }
   
-  // getBtn(){
-  //   // console.log(this.signBtn);
-  //   this.signBtn?.classList.add('d-none')
-  // }
 }

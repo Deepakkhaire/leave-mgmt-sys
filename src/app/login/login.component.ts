@@ -41,6 +41,8 @@ export class LoginComponent implements OnInit{
     console.log(this.allUsers.username);
     if(this.allUsers.username == this.authUsers.value.username && this.allUsers.password == this.authUsers.value.password){
       console.log('success');
+      
+      this.httpServe.loggedIn()
       if(this.allUsers.designation === 'hod'){
         console.log('this is hod dashboard');
         this.router.navigate(

@@ -17,7 +17,8 @@
           <span *ngIf="!isNewUser" class="btn btn-success">
             <a class="text-white sign" routerLink="/signup" (click)="isNewUser = true"> Sign Up</a>
           </span>
-          <button class="btn btn-danger ml-3" id="signOutBtn" routerLink="login">Log Out</button>
+          <button class="btn btn-danger ml-3" id="signOutBtn" (click)="loggedOutt()">Log Out</button>
+          <!-- <button class="btn btn-danger ml-3" id="signOutBtn" routerLink="login">Log Out</button> -->
         </li>
         
       </ul>

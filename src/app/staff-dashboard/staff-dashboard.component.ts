@@ -61,6 +61,9 @@ export class StaffDashboardComponent implements OnInit {
     console.log(newObj);
     this.httpServe.postLeaves(newObj).subscribe((res: any) => {
       console.log(res);
+      this.apprLeaves = 0;
+      this.rejLeaves = 0;
+      this.pendLeaves = 0;
       this.getUsersList()
     })
     
